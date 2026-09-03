@@ -5,7 +5,10 @@ class Sala:
         self.__capacidad = capacidad
 
     def mostrar_datos(self):
-        pass
+        print(f"Numero: {self.__numero}")
+        print(f"Capacidad: {self.__capacidad}")
 
-    def hay_disponibilidad(self):
-        pass
+    def hay_disponibilidad(self, entradas_vendidas):
+        if entradas_vendidas <= self.__capacidad:
+            return "Hay disponibilidad"
+        return "No hay salas"
