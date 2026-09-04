@@ -9,4 +9,11 @@ class ClientePremium(Cliente):
         self.__puntos = puntos
 
     def calcular_precio(self, precio):
-        pass
+        precio = super().calcular_precio(precio)
+        print("Precio después del descuento de menor de edad:", precio)
+
+        total = precio * (1 - self.__descuento)
+        return f"Precio con descuento: {total}"
+
+    def Acumular_puntos(self, puntos):
+        self.__puntos += puntos
